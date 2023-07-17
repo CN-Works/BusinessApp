@@ -26,6 +26,10 @@ class Employee
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $datehired = null;
 
+    #[ORM\ManyToOne(inversedBy: 'employees')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Society $society = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -75,6 +79,18 @@ class Employee
     public function setDatehired(\DateTimeInterface $datehired): static
     {
         $this->datehired = $datehired;
+
+        return $this;
+    }
+
+    public function getSociety(): ?Society
+    {
+        return $this->society;
+    }
+
+    public function setSociety(?Society $society): static
+    {
+        $this->society = $society;
 
         return $this;
     }
