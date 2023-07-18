@@ -30,6 +30,10 @@ class Employee
     #[ORM\JoinColumn(nullable: false)]
     private ?Society $society = null;
 
+    public function __toString() {
+        return $this->firstname." ".$this->lastname;
+    }
+
     public function getId(): ?int
     {
         return $this->id;
