@@ -13,6 +13,7 @@ class SocietyController extends AbstractController
     {
         return $this->render('society/index.html.twig', [
             'controller_name' => 'SocietyController',
+            "tableau" => ["valeur1","valeur2","valeur3","valeur4"],
         ]);
     }
 }
