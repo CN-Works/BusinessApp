@@ -15,7 +15,7 @@ class EmployeeController extends AbstractController
     public function index(EmployeeRepository $employeeRepository): Response
     {
         // getting all employees from SocietyRepository
-        $employees = $employeeRepository->findAll();
+        $employees = $employeeRepository->findBy([],["firstname" => "ASC"]);
         return $this->render('employee/index.html.twig', [
             "employees" => $employees,
         ]);

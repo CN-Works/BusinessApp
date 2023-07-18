@@ -15,7 +15,7 @@ class SocietyController extends AbstractController
     public function index(SocietyRepository $societyRepository): Response
     {   
         // getting all societies from SocietyRepository
-        $societies = $societyRepository->findAll();
+        $societies = $societyRepository->findBy([],["label" => "ASC"]);
         return $this->render('society/index.html.twig', [
             "societies" => $societies,
         ]);
