@@ -39,6 +39,10 @@ class Society
         $this->employees = new ArrayCollection();
     }
 
+    public function __toString() {
+        return $this->label." (".$this->postalcode.")";
+    }
+
     public function getId(): ?int
     {
         return $this->id;
