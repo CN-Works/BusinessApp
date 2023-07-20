@@ -30,6 +30,9 @@ class Employee
     #[ORM\JoinColumn(nullable: false)]
     private ?Society $society = null;
 
+    #[ORM\Column(length: 50, nullable: true)]
+    private ?string $ville = null;
+
     public function __toString() {
         return $this->firstname." ".$this->lastname;
     }
@@ -95,6 +98,18 @@ class Employee
     public function setSociety(?Society $society): static
     {
         $this->society = $society;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(?string $ville): static
+    {
+        $this->ville = $ville;
 
         return $this;
     }
