@@ -4,10 +4,17 @@
 
 {% block body %}
 
+<ul>
+    <li><a href="{{ path("app_employee") }}">See employee list</a></li>
+    <li><a href="{{ path("app_society") }}">See society list</a></li>
+</ul>
+
 <h1>Societies list :</h1>
 
-{% for society in societies %}
-    <p>{{ society }}</p>
-{% endfor %}
+<ul>
+    {% for society in societies %}
+        <li><a href="{{ path("show_society" , {"id": society.id })  }}">{{ society }}</a></li>
+    {% endfor %}
+</ul>
 
 {% endblock %}

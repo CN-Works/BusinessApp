@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}All Societies !{% endblock %}
+
+{% block body %}
+
+<ul>
+    <li><a href="{{ path("app_society") }}">See employee list</a></li>
+    <li><a href="{{ path("app_employee") }}">See society list</a></li>
+</ul>
+
+<h1>Society Information :</h1>
+<br>
+
+<H2>{{ society }}</H2>
+
+<p>
+    {{ society ~ " is located in " ~ society.city ~ " (" ~ society.postalcode ~ ")"}}
+</p>
+
+
+
+{% endblock %}

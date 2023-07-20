@@ -39,20 +39,21 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `lastname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `dateofbirth` datetime NOT NULL,
   `datehired` datetime NOT NULL,
+  `city` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_5D9F75A1E6389D24` (`society_id`),
   CONSTRAINT `FK_5D9F75A1E6389D24` FOREIGN KEY (`society_id`) REFERENCES `society` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Listage des données de la table businessapp.employee : ~7 rows (environ)
-INSERT INTO `employee` (`id`, `society_id`, `firstname`, `lastname`, `dateofbirth`, `datehired`) VALUES
-	(1, 3, 'Marco', 'Piqueur', '2023-07-18 14:19:43', '2023-07-18 14:19:50'),
-	(2, 4, 'Laura', 'Maurenne', '2023-07-18 14:20:36', '2023-07-18 14:20:37'),
-	(3, 1, 'Luigi', 'Despacito', '2023-07-18 14:20:52', '2023-07-18 14:20:52'),
-	(4, 2, 'Fenwyck', 'Delmand', '2023-07-18 14:21:27', '2023-07-18 14:21:28'),
-	(5, 1, 'Marcello', 'Divisioni', '2023-07-18 14:21:43', '2023-07-18 14:21:44'),
-	(6, 4, 'Lauren', 'Burch', '2023-07-18 14:21:58', '2023-07-18 14:21:58'),
-	(7, 3, 'Tibo', 'NotInShape', '2023-07-18 14:22:12', '2023-07-18 14:22:12');
+INSERT INTO `employee` (`id`, `society_id`, `firstname`, `lastname`, `dateofbirth`, `datehired`, `city`) VALUES
+	(1, 3, 'Marco', 'Piqueur', '2023-07-18 14:19:43', '2023-07-18 14:19:50', 'Lisbon'),
+	(2, 4, 'Laura', 'Maurenne', '2023-07-18 14:20:36', '2023-07-18 14:20:37', 'London'),
+	(3, 1, 'Luigi', 'Despacito', '2023-07-18 14:20:52', '2023-07-18 14:20:52', 'San Remo'),
+	(4, 2, 'Fenwyck', 'Delmand', '2023-07-18 14:21:27', '2023-07-18 14:21:28', 'Zurich'),
+	(5, 1, 'Marcello', 'Divisioni', '2023-07-18 14:21:43', '2023-07-18 14:21:44', 'San Remo'),
+	(6, 4, 'Lauren', 'Burch', '2023-07-18 14:21:58', '2023-07-18 14:21:58', 'Paris'),
+	(7, 3, 'Tibo', 'NotInShape', '2023-07-18 14:22:12', '2023-07-18 14:22:12', 'Toulouse');
 
 -- Listage de la structure de table businessapp. messenger_messages
 CREATE TABLE IF NOT EXISTS `messenger_messages` (
@@ -82,7 +83,7 @@ CREATE TABLE IF NOT EXISTS `society` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Listage des données de la table businessapp.society : ~0 rows (environ)
+-- Listage des données de la table businessapp.society : ~4 rows (environ)
 INSERT INTO `society` (`id`, `label`, `creationdate`, `adress`, `postalcode`, `city`) VALUES
 	(1, 'PizzaThis', '2023-07-18 11:10:30', '55 avenue de la pierre', '68000', 'Colmar'),
 	(2, 'LTD', '2023-07-18 11:11:13', '21 rue de l\'art', '06160', 'Antibes'),

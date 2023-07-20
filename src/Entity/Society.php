@@ -40,7 +40,7 @@ class Society
     }
 
     public function __toString() {
-        return $this->label." (".$this->postalcode.")";
+        return $this->label;
     }
 
     public function getId(): ?int

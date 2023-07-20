@@ -20,4 +20,13 @@ class SocietyController extends AbstractController
             "societies" => $societies,
         ]);
     }
+
+    #[Route('/society/{id}', name: 'show_society')]
+    public function showSociety(Society $society): Response {
+        // Getting the wanted society object by using id and and ParamConverter
+        // Same concept as "findOneById"
+        return $this->render('society/show_society.html.twig', [
+            "society" => $society,
+        ]);
+    }
 }
