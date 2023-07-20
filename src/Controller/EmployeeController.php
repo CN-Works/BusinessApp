@@ -20,4 +20,13 @@ class EmployeeController extends AbstractController
             "employees" => $employees,
         ]);
     }
+
+    #[Route('/employee/{id}', name: 'show_employee')]
+    public function showEmployee(Employee $employee): Response {
+        // Getting employee's id using ParamConverter
+
+        return $this->render('employee/show_employee.html.twig', [
+            "employee" => $employee,
+        ]);   
+    }
 }

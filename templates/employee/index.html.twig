@@ -13,7 +13,7 @@
 
 <ol>
     {% for employee in employees %}
-        <li><a href="#">{{ employee }}</a></li>
+        <li><a href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a></li>
     {% endfor %}
 </ol>
 

@@ -9,13 +9,13 @@
     <li><a href="{{ path("app_employee") }}">See society list</a></li>
 </ul>
 
-<h1>Society Informations :</h1>
+<h1>Employee Informations :</h1>
 <br>
 
-<H2>{{ society }}</H2>
+<H2>{{ employee }}</H2>
 
 <p>
-    {{ society ~ " is located in " ~ society.city ~ " (" ~ society.postalcode ~ ")"}}
+    {{ employee ~ " is located in " ~ employee.city ~ " and working at "}} <a href="{{ path("show_society" , {"id": employee.society.id}) }}">{{ employee.society.label }}</a>
 </p>
 
 
