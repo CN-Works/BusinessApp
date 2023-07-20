@@ -31,7 +31,7 @@ class Employee
     private ?Society $society = null;
 
     #[ORM\Column(length: 50, nullable: true)]
-    private ?string $ville = null;
+    private ?string $city = null;
 
     public function __toString() {
         return $this->firstname." ".$this->lastname;
@@ -102,14 +102,14 @@ class Employee
         return $this;
     }
 
-    public function getVille(): ?string
+    public function getCity(): ?string
     {
-        return $this->ville;
+        return $this->city;
     }
 
-    public function setVille(?string $ville): static
+    public function setCity(?string $city): static
     {
-        $this->ville = $ville;
+        $this->city = $city;
 
         return $this;
     }
