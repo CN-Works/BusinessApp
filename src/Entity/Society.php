@@ -60,6 +60,11 @@ class Society
         return $this;
     }
 
+    public function getFormatCreationdate(): ?string
+    {
+        return $this->creationdate->format("d M Y");
+    }
+
     public function getCreationdate(): ?\DateTimeInterface
     {
         return $this->creationdate;
