@@ -24,11 +24,18 @@
 <h3>Employees list :</h3>
 
 {% if society.employees | length > 0 %}
-    <ol>
-        {% for employee in society.employees %}
-            <li><a href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a></li>
-        {% endfor %}
-    </ol>    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for employee in society.employees %}
+                <tr><td><a href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a></td></tr>
+            {% endfor %}
+        </tbody>
+    </table> 
 {% else %}
     <p>There is not any employee in this society</p>
 {% endif %}
