@@ -23,7 +23,7 @@
 
 <h3>Employees list :</h3>
 
-{% if society.employees | lenght > 0 %}
+{% if society.employees | length > 0 %}
     <ol>
         {% for employee in society.employees %}
             <li><a href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a></li>
