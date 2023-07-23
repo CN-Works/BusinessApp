@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS `doctrine_migration_versions` (
   PRIMARY KEY (`version`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
--- Listage des données de la table businessapp.doctrine_migration_versions : ~1 rows (environ)
+-- Listage des données de la table businessapp.doctrine_migration_versions : ~0 rows (environ)
 INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
 	('DoctrineMigrations\\Version20230718073237', '2023-07-18 07:32:52', 128);
 
@@ -47,13 +47,13 @@ CREATE TABLE IF NOT EXISTS `employee` (
 
 -- Listage des données de la table businessapp.employee : ~7 rows (environ)
 INSERT INTO `employee` (`id`, `society_id`, `firstname`, `lastname`, `dateofbirth`, `datehired`, `city`) VALUES
-	(1, 3, 'Marco', 'Piqueur', '2023-07-18 14:19:43', '2023-07-18 14:19:50', 'Lisbon'),
-	(2, 4, 'Laura', 'Maurenne', '2023-07-18 14:20:36', '2023-07-18 14:20:37', 'London'),
-	(3, 1, 'Luigi', 'Despacito', '2023-07-18 14:20:52', '2023-07-18 14:20:52', 'San Remo'),
-	(4, 2, 'Fenwyck', 'Delmand', '2023-07-18 14:21:27', '2023-07-18 14:21:28', 'Zurich'),
-	(5, 1, 'Marcello', 'Divisioni', '2023-07-18 14:21:43', '2023-07-18 14:21:44', 'San Remo'),
-	(6, 4, 'Lauren', 'Burch', '2023-07-18 14:21:58', '2023-07-18 14:21:58', 'Paris'),
-	(7, 3, 'Tibo', 'NotInShape', '2023-07-18 14:22:12', '2023-07-18 14:22:12', 'Toulouse');
+	(1, 3, 'Marco', 'Piqueur', '1955-07-18 14:19:43', '2023-07-18 14:19:50', 'Lisbon'),
+	(2, 4, 'Laura', 'Maurenne', '2001-07-18 14:20:36', '2023-07-18 14:20:37', 'London'),
+	(3, 1, 'Luigi', 'Despacito', '2002-07-18 14:20:52', '2023-07-18 14:20:52', 'San Remo'),
+	(4, 2, 'Fenwyck', 'Delmand', '1980-07-18 14:21:27', '2023-07-18 14:21:28', 'Zurich'),
+	(5, 1, 'Marcello', 'Divisioni', '1998-07-18 14:21:43', '2023-07-18 14:21:44', 'San Remo'),
+	(6, 4, 'Lauren', 'Burch', '1999-07-18 14:21:58', '2023-07-18 14:21:58', 'Paris'),
+	(7, 3, 'Tibo', 'NotInShape', '1986-07-18 14:22:12', '2023-07-18 14:22:12', 'Toulouse');
 
 -- Listage de la structure de table businessapp. messenger_messages
 CREATE TABLE IF NOT EXISTS `messenger_messages` (
