@@ -21,6 +21,12 @@
     Created on {{ society.Creationdate | date("d M Y") }}
 </p>
 
+<h3>Employees list :</h3>
 
+{% for employee in society.employees %}
+
+    <a href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a>
+    <br>
+{% endfor %}
 
 {% endblock %}
