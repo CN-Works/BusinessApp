@@ -14,6 +14,8 @@
 
 <H2>{{ employee }}</H2>
 
+<p>{{ employee.firstname }} is {{ employee.getAge }} years old</p>
+
 <p>
     {{ employee ~ " is located in " ~ employee.city ~ " and working at "}} <a href="{{ path("show_society" , {"id": employee.society.id}) }}">{{ employee.society.label }}</a> since {{ employee.datehired | date("d M Y") }}
 </p>

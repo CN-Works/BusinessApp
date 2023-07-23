@@ -78,6 +78,17 @@ class Employee
         return $this;
     }
 
+    public function getAge(): ?string {
+        // Getting today's date
+        $now = new \DateTime();
+
+        // difference between today and birthday
+        $interval = $this->dateofbirth->diff($now);
+
+        // returns age in years
+        return $interval->format("%Y");
+    }
+
     public function getDatehired(): ?\DateTimeInterface
     {
         return $this->datehired;
