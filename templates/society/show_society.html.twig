@@ -23,10 +23,14 @@
 
 <h3>Employees list :</h3>
 
-{% for employee in society.employees %}
-
-    <a href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a>
-    <br>
-{% endfor %}
+{% if society.employees | lenght > 0 %}
+    <ol>
+        {% for employee in society.employees %}
+            <li><a href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a></li>
+        {% endfor %}
+    </ol>    
+{% else %}
+    <p>There is not any employee in this society</p>
+{% endif %}
 
 {% endblock %}
