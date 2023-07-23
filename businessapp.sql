@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `lastname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `dateofbirth` datetime NOT NULL,
   `datehired` datetime NOT NULL,
-  `city` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `city` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_5D9F75A1E6389D24` (`society_id`),
   CONSTRAINT `FK_5D9F75A1E6389D24` FOREIGN KEY (`society_id`) REFERENCES `society` (`id`)
