@@ -32,6 +32,7 @@ class Society
     private ?string $city = null;
 
     #[ORM\OneToMany(mappedBy: 'society', targetEntity: Employee::class, orphanRemoval: true)]
+    #[ORM\OrderBy(["firstname" => "ASC"])]
     private Collection $employees;
 
     public function __construct()
