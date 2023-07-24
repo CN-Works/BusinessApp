@@ -11,6 +11,39 @@
 
 <h1>Create an Employee :</h1>
 
-{{ form(formAddEmployee) }}
+{{ form_start(formAddEmployee) }}
+    {# Name and family name #}
+    <div class="row">
+        <div class="col-sm">
+            {{ form_row(formAddEmployee.firstname) }}
+        </div>
+        <div class="col-sm">
+            {{ form_row(formAddEmployee.lastname) }}
+        </div>
+    </div>
+
+    {# Dates related #}
+    <div class="row">
+        <div class="col-sm">
+            {{ form_row(formAddEmployee.dateofbirth) }}
+        </div>
+        <div class="col-sm">
+            {{ form_row(formAddEmployee.datehired) }}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm">
+            {{ form_row(formAddEmployee.city) }}
+        </div>
+        <div class="col-sm">
+            {{ form_row(formAddEmployee.society) }}
+        </div>
+    </div>
+
+    <div class="d-grid gap-2">
+        {{ form_row(formAddEmployee.submit) }}
+    </div>
+{{ form_end(formAddEmployee) }}
 
 {% endblock %}
