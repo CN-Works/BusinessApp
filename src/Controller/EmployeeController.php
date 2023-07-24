@@ -24,11 +24,28 @@ class EmployeeController extends AbstractController
     }
 
     #[Route('/employee/new', name: 'new_employee')]
-    public function new(Request $request): Response
+    public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $employee = new Employee();
 
         $form = $this->createForm(EmployeeType::class, $employee );
+
+        $form->handleRequest($request);
+
+        // Checks if form inputs are in a valid type
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            // Affecting the form data into the object
+            $society = $form->getData();
+
+            // Preparing society object
+            $entityManager->persist($employee);
+            // Saving in db
+            $entityManager->flush();
+
+            // Redirection to all societies
+            return $this->redirectToRoute("app_employee");
+        }
 
         return $this->render('employee/new.html.twig', [
             'formAddEmployee' => $form,
