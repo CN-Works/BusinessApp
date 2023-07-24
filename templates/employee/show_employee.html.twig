@@ -14,7 +14,7 @@
 <p>{{ employee.firstname }} is {{ employee.getAge }} years old and is located in {{ employee.city }}</p>
 
 <p>
-    {{ employee.firstname }} is working at <a href="{{ path("show_society" , {"id": employee.society.id}) }}">{{ employee.society.label }}</a> since {{ employee.datehired | date("d M Y") }}
+    {{ employee.firstname }} is working at <a class="entity-simplelist-element" href="{{ path("show_society" , {"id": employee.society.id}) }}">{{ employee.society.label }}</a> since {{ employee.datehired | date("d M Y") }}
 </p>
 
 

@@ -20,18 +20,12 @@
 </p>
 
 {% if society.employees | length > 0 %}
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th>Employee's name</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for employee in society.employees %}
-                <tr><td><a href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a></td></tr>
-            {% endfor %}
-        </tbody>
-    </table> 
+    <H3 class="entity-simplelist-title">Employees list :</H3>
+    <div class="entity-simplelist">
+        {% for employee in society.employees %}
+            <a class="entity-simplelist-element" href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a>
+        {% endfor %}
+    </div>
 {% else %}
     <p>There is not any employee in this society</p>
 {% endif %}

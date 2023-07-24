@@ -37,14 +37,14 @@ a:visited{
   font-size: 1.1rem;
   padding: 20px;
   color: #F0EDEE;
-  background-color: #2E294E;
+  background-color: #2f266d;
 
   text-decoration: none;
 }
 
 .navbar-button:hover {
   color: #F0EDEE;
-  background-color: #26223f;
+  background-color: #251e55;
 }
 
 .navbar-button:visited {
@@ -55,14 +55,14 @@ a:visited{
   font-size: 1.1rem;
   padding: 20px;
   color: #F0EDEE;
-  background-color: #2E294E;
+  background-color: #2f266d;
 
   text-decoration: none;
 }
 
 .navbar-button-create:hover {
   color: #F0EDEE;
-  background-color: #F26430;
+  background-color: #8d61fc;
 }
 
 .navbar-button-create:visited {
@@ -78,10 +78,19 @@ a:visited{
 
 .entity-simplelist-element {
   max-width: 200px;
-  display: flex;
-  justify-content: center;
+
+  background-color: #FAFAFF;
+  color: #273469;
 
   border-radius: 3px;
+}
+
+.entity-simplelist-element:visited {
+  color: #273469;
+}
+
+.entity-simplelist-element:hover {
+  background-color: #E4D9FF;
 }
 
 .entity-simplelist-title {
@@ -93,12 +102,12 @@ a:visited{
 
 .employee-name {
   font-weight: 700;
-  color: #2C666E;
+  color: #30343F;
 }
 
 /* Society */
 
 .society-name {
   font-weight: 700;
-  color: #DB324D;
+  color: #273469;
 }
