@@ -4,15 +4,12 @@
 
 {% block body %}
 
-<ul>
-    <li><a href="{{ path("app_employee") }}">See employee list</a></li>
-    <li><a href="{{ path("app_society") }}">See society list</a></li>
-</ul>
+<div class="navbar-main">
+    <a class="navbar-button" href="{{ path("app_employee") }}">See employee list</a>
+    <a class="navbar-button" href="{{ path("app_society") }}">See society list</a>
+</div>
 
-<h1>Employee Informations :</h1>
-<br>
-
-<H2>{{ employee }}</H2>
+<H1 class="employee-name">{{ employee }}</H1>
 
 <p>{{ employee.firstname }} is {{ employee.getAge }} years old and is located in {{ employee.city }}</p>
 

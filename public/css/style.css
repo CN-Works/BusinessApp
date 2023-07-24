@@ -1,6 +1,104 @@
 * {
-    font-family: 'Poppins', sans-serif;
-    padding : 0;
-    margin : 0;
-    box-sizing: border-box;
-  }
+  font-family: 'Poppins', sans-serif;
+  padding : 0;
+  margin : 0;
+  box-sizing: border-box;
+}
+
+/* General */
+
+a {
+  text-decoration: none;
+  padding: 5px;
+
+  color: #ffffff;
+  background-color: #5899E2;
+
+  transition: all, 0.25s;
+
+  user-select: none;
+}
+
+a:hover {
+  background-color: #406895;
+}
+
+a:visited{
+  color: #ffffff;
+}
+
+.navbar-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-button {
+  font-size: 1.1rem;
+  padding: 20px;
+  color: #F0EDEE;
+  background-color: #2E294E;
+
+  text-decoration: none;
+}
+
+.navbar-button:hover {
+  color: #F0EDEE;
+  background-color: #26223f;
+}
+
+.navbar-button:visited {
+  color: #F0EDEE;
+}
+
+.navbar-button-create {
+  font-size: 1.1rem;
+  padding: 20px;
+  color: #F0EDEE;
+  background-color: #2E294E;
+
+  text-decoration: none;
+}
+
+.navbar-button-create:hover {
+  color: #F0EDEE;
+  background-color: #F26430;
+}
+
+.navbar-button-create:visited {
+  color: #F0EDEE;
+}
+
+.entity-simplelist {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px
+}
+
+.entity-simplelist-element {
+  max-width: 200px;
+  display: flex;
+  justify-content: center;
+
+  border-radius: 3px;
+}
+
+.entity-simplelist-title {
+  font-weight: 500;
+  color: #3A506B;
+}
+
+/* Employee */
+
+.employee-name {
+  font-weight: 700;
+  color: #2C666E;
+}
+
+/* Society */
+
+.society-name {
+  font-weight: 700;
+  color: #DB324D;
+}

@@ -4,18 +4,18 @@
 
 {% block body %}
 
-<ul>
-    <li><a href="{{ path("app_employee") }}">See employee list</a></li>
-    <li><a href="{{ path("app_society") }}">See society list</a></li>
-    <li><a href="{{ path("new_employee") }}">Create an Employee</a></li>
-</ul>
+<div class="navbar-main">
+    <a class="navbar-button" href="{{ path("app_employee") }}">See employee list</a>
+    <a class="navbar-button" href="{{ path("app_society") }}">See society list</a>
+    <a class="navbar-button-create" href="{{ path("new_employee") }}">Create an Employee</a>
+</div>
 
-<h1>Employee list :</h1>
+<h1 class="entity-simplelist-title">Employee list :</h1>
 
-<ol>
+<div class="entity-simplelist">
     {% for employee in employees %}
-        <li><a href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a></li>
+        <a class="entity-simplelist-element" href="{{ path("show_employee" , {"id": employee.id }) }}">{{ employee }}</a>
     {% endfor %}
-</ol>
+</div>
 
 {% endblock %}
