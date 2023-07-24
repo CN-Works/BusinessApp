@@ -24,11 +24,28 @@ class SocietyController extends AbstractController
     }
 
     #[Route('/society/new', name: 'new_society')]
-    public function new(Request $request): Response
+    public function new(Request $request, EntityManagerInterface $entityManager): Response
     {
         $society = new Society();
 
         $form = $this->createForm(SocietyType::class, $society );
+
+        $form->handleRequest($request);
+
+        // Checks if form inputs are in a valid type
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            // Affecting the form data into the object
+            $society = $form->getData();
+
+            // Preparing society object
+            $entityManager->persist($society);
+            // Saving in db
+            $entityManager->flush();
+
+            // Redirection to all societies
+            return $this->redirectToRoute("app_society");
+        }
 
         return $this->render('society/new.html.twig', [
             'formAddSociety' => $form,
