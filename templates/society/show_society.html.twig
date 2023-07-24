@@ -19,13 +19,11 @@
     Created on {{ society.Creationdate | date("d M Y") }}
 </p>
 
-<h3>Employees list :</h3>
-
 {% if society.employees | length > 0 %}
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Employee's name</th>
             </tr>
         </thead>
         <tbody>
