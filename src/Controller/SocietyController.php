@@ -24,9 +24,12 @@ class SocietyController extends AbstractController
     }
 
     #[Route('/society/new', name: 'new_society')]
-    public function new(Request $request, EntityManagerInterface $entityManager): Response
+    #[Route('/society/{id}/edit', name: 'edit_society')]
+    public function new_edit(Society $society = null,Request $request, EntityManagerInterface $entityManager): Response
     {
-        $society = new Society();
+        if (!$society) {
+            $society = new Society;
+        }
 
         $form = $this->createForm(SocietyType::class, $society );
 

@@ -19,6 +19,10 @@
     Created on {{ society.Creationdate | date("d M Y") }}
 </p>
 
+<a class="entity-edit-button" href="{{ path('edit_society', {"id" : society.id} ) }}">
+    <img class="entity-edit-button-image" src="{{ asset("img/button_edit.png") }}" alt="">
+</a>
+
 {% if society.employees | length > 0 %}
     <H3 class="entity-simplelist-title">Employees list :</H3>
     <div class="entity-simplelist">

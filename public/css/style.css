@@ -113,3 +113,30 @@ a:visited{
   font-weight: 700;
   color: #273469;
 }
+
+.entity-edit-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px;
+  width: 70px;
+
+  border-radius: 5px;
+
+  background-color: #FAA916;
+}
+
+.entity-edit-button:hover {
+  background-color: #eaa016;
+}
+
+.entity-edit-button-image {
+  height: 20px;
+
+  filter: invert();
+}
+
+.entity-edit-button {
+  color: #ffffff;
+}
