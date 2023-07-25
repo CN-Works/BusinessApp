@@ -17,6 +17,10 @@
     {{ employee.firstname }} is working at <a class="entity-simplelist-element" href="{{ path("show_society" , {"id": employee.society.id}) }}">{{ employee.society.label }}</a> since {{ employee.datehired | date("d M Y") }}
 </p>
 
+<a class="entity-edit-button" href="{{ path('edit_employee', {"id" : employee.id} ) }}">
+    <img class="entity-edit-button-image" src="{{ asset("img/button_edit.png") }}" alt="">
+</a>
+
 
 
 {% endblock %}
