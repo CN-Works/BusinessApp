@@ -9,7 +9,11 @@
     <a class="navbar-button" href="{{ path("app_society") }}">See society list</a>
 </div>
 
-<h1>Create an Employee :</h1>
+{% if edit %}
+    <h1>Edit Employee</h1>
+{% else %}
+    <h1>Create an Employee</h1>
+{% endif %}
 
 {{ form_start(formAddEmployee) }}
     {# Name and family name #}

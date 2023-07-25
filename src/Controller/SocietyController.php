@@ -52,6 +52,7 @@ class SocietyController extends AbstractController
 
         return $this->render('society/new.html.twig', [
             'formAddSociety' => $form,
+            "edit" => $society->getId(),
         ]);
     }
 

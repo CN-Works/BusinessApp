@@ -52,6 +52,7 @@ class EmployeeController extends AbstractController
 
         return $this->render('employee/new.html.twig', [
             'formAddEmployee' => $form,
+            "edit" => $employee->getId(),
         ]);
     }
 
